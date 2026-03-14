@@ -1,6 +1,5 @@
 package ui.screens
 
-import androidx.compose.animation.core.*
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -43,6 +42,7 @@ object OnboardingScreen : Screen {
             modifier = Modifier
                 .fillMaxSize()
                 .background(Color.White)
+                .safeDrawingPadding()  // ← respeta barras del sistema
         ) {
             Column(
                 modifier = Modifier
@@ -51,7 +51,6 @@ object OnboardingScreen : Screen {
                     .padding(top = 48.dp, bottom = 40.dp),
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
-
                 HorizontalPager(
                     state = pagerState,
                     modifier = Modifier.weight(1f)
@@ -61,7 +60,6 @@ object OnboardingScreen : Screen {
 
                 Spacer(Modifier.height(24.dp))
 
-                // Dots indicator
                 DotsIndicator(
                     totalDots = pageCount,
                     selectedIndex = pagerState.currentPage
@@ -69,7 +67,6 @@ object OnboardingScreen : Screen {
 
                 Spacer(Modifier.height(32.dp))
 
-                // Botón
                 val isLast = pagerState.currentPage == pageCount - 1
                 Button(
                     onClick = {
@@ -85,9 +82,7 @@ object OnboardingScreen : Screen {
                         .fillMaxWidth()
                         .height(52.dp),
                     shape = RoundedCornerShape(12.dp),
-                    colors = ButtonDefaults.buttonColors(
-                        containerColor = FirulaisBlue
-                    )
+                    colors = ButtonDefaults.buttonColors(containerColor = FirulaisBlue)
                 ) {
                     Text(
                         text = if (isLast) "Comenzar" else "Siguiente",
@@ -122,9 +117,7 @@ object OnboardingScreen : Screen {
                 lineHeight = 34.sp,
                 modifier = Modifier.padding(horizontal = 8.dp)
             )
-
             Spacer(Modifier.height(40.dp))
-
             Image(
                 painter = painterResource(image),
                 contentDescription = null,

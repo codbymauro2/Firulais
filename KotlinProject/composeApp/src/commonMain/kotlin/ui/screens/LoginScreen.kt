@@ -6,10 +6,6 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardOptions
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Email
-import androidx.compose.material.icons.filled.Lock
-import androidx.compose.material.icons.filled.Person
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -31,6 +27,7 @@ import kotlinproject.composeapp.generated.resources.Res
 import kotlinproject.composeapp.generated.resources.splash_icon
 import org.jetbrains.compose.resources.ExperimentalResourceApi
 import org.jetbrains.compose.resources.painterResource
+import ui.theme.FirulaisBlue
 
 object LoginScreen : Screen {
 
@@ -45,6 +42,7 @@ object LoginScreen : Screen {
             modifier = Modifier
                 .fillMaxSize()
                 .background(Color.White)
+                .safeDrawingPadding()  // ← respeta barras del sistema
         ) {
             Column(
                 modifier = Modifier
@@ -53,8 +51,6 @@ object LoginScreen : Screen {
                     .padding(top = 56.dp, bottom = 32.dp),
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
-
-                // Logo + nombre
                 Image(
                     painter = painterResource(Res.drawable.splash_icon),
                     contentDescription = "Firulais Logo",
@@ -73,16 +69,16 @@ object LoginScreen : Screen {
 
                 Spacer(Modifier.height(40.dp))
 
-                // Campo Email
                 OutlinedTextField(
                     value = email,
                     onValueChange = { email = it },
                     placeholder = { Text("Email", color = Color(0xFFAAAAAA)) },
                     leadingIcon = {
-                        Icon(
-                            Icons.Filled.Email,
-                            contentDescription = null,
-                            tint = Color(0xFFAAAAAA)
+                        Text(
+                            text = "✉",
+                            fontSize = 18.sp,
+                            color = Color(0xFFAAAAAA),
+                            modifier = Modifier.padding(start = 4.dp)
                         )
                     },
                     singleLine = true,
@@ -99,16 +95,16 @@ object LoginScreen : Screen {
 
                 Spacer(Modifier.height(12.dp))
 
-                // Campo Contraseña
                 OutlinedTextField(
                     value = password,
                     onValueChange = { password = it },
                     placeholder = { Text("Contraseña", color = Color(0xFFAAAAAA)) },
                     leadingIcon = {
-                        Icon(
-                            Icons.Filled.Lock,
-                            contentDescription = null,
-                            tint = Color(0xFFAAAAAA)
+                        Text(
+                            text = "🔒",
+                            fontSize = 16.sp,
+                            color = Color(0xFFAAAAAA),
+                            modifier = Modifier.padding(start = 4.dp)
                         )
                     },
                     singleLine = true,
@@ -126,7 +122,6 @@ object LoginScreen : Screen {
 
                 Spacer(Modifier.height(24.dp))
 
-                // Botón Iniciar sesión
                 Button(
                     onClick = { nav.replace(HomeScreen) },
                     modifier = Modifier
@@ -145,7 +140,6 @@ object LoginScreen : Screen {
 
                 Spacer(Modifier.height(20.dp))
 
-                // Divider "o iniciar sesión con"
                 Row(
                     verticalAlignment = Alignment.CenterVertically,
                     modifier = Modifier.fillMaxWidth()
@@ -161,69 +155,42 @@ object LoginScreen : Screen {
 
                 Spacer(Modifier.height(20.dp))
 
-                // Botones sociales (Facebook y Google)
                 Row(
                     horizontalArrangement = Arrangement.spacedBy(16.dp),
                     modifier = Modifier.fillMaxWidth(),
                     verticalAlignment = Alignment.CenterVertically
                 ) {
-                    // Facebook
                     OutlinedButton(
-                        onClick = { /* TODO: Facebook login */ },
-                        modifier = Modifier
-                            .weight(1f)
-                            .height(48.dp),
+                        onClick = { },
+                        modifier = Modifier.weight(1f).height(48.dp),
                         shape = RoundedCornerShape(10.dp),
-                        border = ButtonDefaults.outlinedButtonBorder.copy(width = 1.dp),
                         colors = ButtonDefaults.outlinedButtonColors(contentColor = Color(0xFF1877F2))
                     ) {
-                        Text(
-                            "f",
-                            fontSize = 22.sp,
-                            fontWeight = FontWeight.Bold,
-                            color = Color(0xFF1877F2)
-                        )
+                        Text("f  Facebook", fontSize = 13.sp, fontWeight = FontWeight.Bold, color = Color(0xFF1877F2))
                     }
 
-                    // Google
                     OutlinedButton(
-                        onClick = { /* TODO: Google login */ },
-                        modifier = Modifier
-                            .weight(1f)
-                            .height(48.dp),
+                        onClick = { },
+                        modifier = Modifier.weight(1f).height(48.dp),
                         shape = RoundedCornerShape(10.dp),
-                        border = ButtonDefaults.outlinedButtonBorder.copy(width = 1.dp),
                         colors = ButtonDefaults.outlinedButtonColors(contentColor = Color(0xFFDB4437))
                     ) {
-                        // Letra G como ícono simple
-                        Text(
-                            "G",
-                            fontSize = 20.sp,
-                            fontWeight = FontWeight.Bold,
-                            color = Color(0xFFDB4437)
-                        )
+                        Text("G  Google", fontSize = 13.sp, fontWeight = FontWeight.Bold, color = Color(0xFFDB4437))
                     }
                 }
 
                 Spacer(Modifier.weight(1f))
 
-                // Link de registro
                 Text(
                     text = buildAnnotatedString {
                         withStyle(SpanStyle(color = Color(0xFF888888), fontSize = 13.sp)) {
                             append("¿No tenés una cuenta? ")
                         }
-                        withStyle(
-                            SpanStyle(
-                                color = FirulaisBlue,
-                                fontWeight = FontWeight.SemiBold,
-                                fontSize = 13.sp
-                            )
-                        ) {
+                        withStyle(SpanStyle(color = FirulaisBlue, fontWeight = FontWeight.SemiBold, fontSize = 13.sp)) {
                             append("Registrate")
                         }
                     },
-                    modifier = Modifier.clickable { /* TODO: navegar a registro */ },
+                    modifier = Modifier.clickable { },
                     textAlign = TextAlign.Center
                 )
             }
