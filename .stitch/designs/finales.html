@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ee9d2b",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#221a10",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        .confetti-bg {
+            background-image: radial-gradient(circle at 10% 20%, rgba(238, 157, 43, 0.1) 0%, transparent 20%),
+                              radial-gradient(circle at 90% 80%, rgba(238, 157, 43, 0.1) 0%, transparent 20%),
+                              radial-gradient(circle at 50% 50%, rgba(238, 157, 43, 0.05) 0%, transparent 50%);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden confetti-bg">
+<!-- Header -->
+<div class="sticky top-0 z-50 flex items-center bg-background-light/80 backdrop-blur-md dark:bg-background-dark/80 p-4 pb-2 justify-between border-b border-primary/10">
+<div class="text-slate-900 dark:text-slate-100 flex size-10 shrink-0 items-center justify-center rounded-full hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined">arrow_back_ios_new</span>
+</div>
+<h2 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight tracking-tight flex-1 text-center">Finales Felices</h2>
+<div class="flex size-10 items-center justify-end">
+<button class="flex items-center justify-center rounded-full size-10 hover:bg-primary/10 transition-colors text-slate-900 dark:text-slate-100">
+<span class="material-symbols-outlined">share</span>
+</button>
+</div>
+</div>
+<!-- Hero Section -->
+<div class="px-6 pt-8 pb-6 text-center">
+<div class="inline-flex items-center justify-center p-3 mb-4 rounded-full bg-primary/20 text-primary">
+<span class="material-symbols-outlined text-3xl">celebration</span>
+</div>
+<h1 class="text-slate-900 dark:text-slate-100 text-3xl font-extrabold tracking-tight mb-2">¡Finales Felices!</h1>
+<p class="text-slate-600 dark:text-slate-400 text-base leading-relaxed max-w-xs mx-auto">
+                Conoce las historias de las mascotas que volvieron a casa gracias a la comunidad Firulais. 🎉
+            </p>
+</div>
+<!-- Main Content: Success Stories List -->
+<div class="flex flex-col gap-6 p-4 pb-24">
+<!-- Success Card 1 -->
+<div class="flex flex-col items-stretch justify-start rounded-xl shadow-lg shadow-primary/5 bg-white dark:bg-slate-900 overflow-hidden border border-primary/10">
+<div class="w-full bg-center bg-no-repeat aspect-[4/3] bg-cover" data-alt="Happy dog smiling next to its owner in a park" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDvBX0WiqCpOjN1z_dbhkrlwSHmrGsVnuzxJUCVMyZ6xD_uTm9_Q3cm69S8igKIibaAWQ4IRGOvdCP4DiT_DIy-0aGF4Op5ns1AoZ8tgkCj38T6jf3tm8ochA4KIMlw7SpCZQcJdBn0CKmRY8skVFkHuQg08ZF7ooJeM0frlNSuH9orIz381GCE0dFWdgySWXKxFVHfpoZ4bI2-Mti4Fj9QkcKV9iXcNZo1nJBFfFvsoi-C3Mcpe99gqUHuHGIkJHMjxy3mjP-CcJE");'></div>
+<div class="flex w-full flex-col p-5 gap-3">
+<div class="flex justify-between items-start">
+<h3 class="text-slate-900 dark:text-slate-100 text-xl font-bold tracking-tight">¡Luna volvió a casa!</h3>
+<span class="px-2 py-1 bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 text-xs font-bold rounded-md uppercase tracking-wider">Reencontrada</span>
+</div>
+<p class="text-slate-600 dark:text-slate-400 text-base leading-snug italic">
+                        "Gracias a Firulais, Luna está de nuevo con nosotros después de 3 días perdida. ¡Estamos eternamente agradecidos por el apoyo!"
+                    </p>
+<div class="flex items-center gap-2 mt-2 pt-3 border-t border-primary/5">
+<span class="material-symbols-outlined text-primary text-sm">location_on</span>
+<p class="text-slate-500 dark:text-slate-500 text-sm font-medium">Hace 2 horas • Buenos Aires</p>
+</div>
+</div>
+</div>
+<!-- Success Card 2 -->
+<div class="flex flex-col items-stretch justify-start rounded-xl shadow-lg shadow-primary/5 bg-white dark:bg-slate-900 overflow-hidden border border-primary/10">
+<div class="w-full bg-center bg-no-repeat aspect-[4/3] bg-cover" data-alt="Fluffy cat being hugged by a happy child" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCGuls5fyEq6-zQagl38s24bJaQSPV3BnWYsKh98FEjFUEVIgXCQpCRDKrBPz4BbACPzvF1xhRgwENIOQk61Ge-gqFZym3fx-BtNg4ruj1nOygQoiYde569YoYCZrwb6YWTEpbkdKqyU61mvMWLcOEwbA2gQtgeuHAq5TmMkTUjOBYQDWUq3XHZfs71Tsh87n9MOnsJ2-Zgn7XMPFwsYcM2zfylbDxwU0Qy4VcWBFJTQ_UXdi6rhwkiuxqxANpgCaxXncDOqdymlTs");'></div>
+<div class="flex w-full flex-col p-5 gap-3">
+<div class="flex justify-between items-start">
+<h3 class="text-slate-900 dark:text-slate-100 text-xl font-bold tracking-tight">Bigotes está a salvo</h3>
+<span class="px-2 py-1 bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 text-xs font-bold rounded-md uppercase tracking-wider">Reencontrada</span>
+</div>
+<p class="text-slate-600 dark:text-slate-400 text-base leading-snug italic">
+                        "Alguien vio la notificación en la app y nos llamó enseguida. Bigotes ya está durmiendo en su sillón favorito."
+                    </p>
+<div class="flex items-center gap-2 mt-2 pt-3 border-t border-primary/5">
+<span class="material-symbols-outlined text-primary text-sm">location_on</span>
+<p class="text-slate-500 dark:text-slate-500 text-sm font-medium">Ayer • Córdoba</p>
+</div>
+</div>
+</div>
+<!-- Success Card 3 -->
+<div class="flex flex-col items-stretch justify-start rounded-xl shadow-lg shadow-primary/5 bg-white dark:bg-slate-900 overflow-hidden border border-primary/10">
+<div class="w-full bg-center bg-no-repeat aspect-[4/3] bg-cover" data-alt="Small happy golden retriever puppy with family" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCzC7RMvcBocO6wl9Q-7MBUtz-pfNaU93M4PocsoLHUhfs--aGv2-SJJ7-PxmgERkiVigN-yEHQ016zqgqj7gTg7Y0zIv1wILS6RcunJ4z5gCfmQrDGE-P__tf2rVVyS1iDzFqVhQ1H-Lo38gyz-eUPkmfocuM6-WC9vwxCc0odLq53IzDX_UGWHNf8M-0wDXj7RT2G6jDlOy9Xwac32jWKWZ7H5JoIsBljy8DKSV4YcUSJFW3fNgZFNwW4BolQamo0MK1JkhTB5lE");'></div>
+<div class="flex w-full flex-col p-5 gap-3">
+<div class="flex justify-between items-start">
+<h3 class="text-slate-900 dark:text-slate-100 text-xl font-bold tracking-tight">Rocco volvió con su familia</h3>
+<span class="px-2 py-1 bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 text-xs font-bold rounded-md uppercase tracking-wider">Reencontrada</span>
+</div>
+<p class="text-slate-600 dark:text-slate-400 text-base leading-snug italic">
+                        "Fueron los días más largos de nuestra vida, pero la comunidad nos ayudó a no perder la esperanza. ¡Gracias Firulais!"
+                    </p>
+<div class="flex items-center gap-2 mt-2 pt-3 border-t border-primary/5">
+<span class="material-symbols-outlined text-primary text-sm">location_on</span>
+<p class="text-slate-500 dark:text-slate-500 text-sm font-medium">Hace 3 días • Rosario</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Navigation Bar -->
+<div class="fixed bottom-0 left-0 right-0 z-50 bg-white/90 dark:bg-slate-900/90 backdrop-blur-lg border-t border-primary/10 px-4 pb-8 pt-3">
+<div class="flex gap-2 max-w-md mx-auto">
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400 dark:text-slate-500" href="#">
+<div class="flex h-8 items-center justify-center">
+<span class="material-symbols-outlined">search</span>
+</div>
+<p class="text-[10px] font-bold uppercase tracking-widest">Perdidos</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400 dark:text-slate-500" href="#">
+<div class="flex h-8 items-center justify-center">
+<span class="material-symbols-outlined">map</span>
+</div>
+<p class="text-[10px] font-bold uppercase tracking-widest">Mapa</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-primary" href="#">
+<div class="flex h-8 items-center justify-center">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">pets</span>
+</div>
+<p class="text-[10px] font-bold uppercase tracking-widest">Historias</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400 dark:text-slate-500" href="#">
+<div class="flex h-8 items-center justify-center">
+<span class="material-symbols-outlined">person</span>
+</div>
+<p class="text-[10px] font-bold uppercase tracking-widest">Perfil</p>
+</a>
+</div>
+</div>
+</div>
+</body></html>

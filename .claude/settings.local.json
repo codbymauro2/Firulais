@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find /c/Users/mauro/OneDrive/Documentos/AntigravityProyects/firulais -type f -name *migration* -o -name *schema* -o -name *.sql)",
+      "Bash(gh repo:*)"
+    ]
+  }
+}

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#2b9dee",
+              "background-light": "#f6f7f8",
+              "background-dark": "#101a22",
+              "lost-red": "#ef4444",
+              "whatsapp-green": "#25d366"
+            },
+            fontFamily: {
+              "display": ["Plus Jakarta Sans"]
+            },
+            borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<title>Detalle de Mascota - Firulais</title>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased">
+<div class="relative flex min-h-screen w-full flex-col max-w-[430px] mx-auto bg-white dark:bg-slate-900 shadow-2xl overflow-x-hidden">
+<!-- Header -->
+<div class="sticky top-0 z-50 flex items-center bg-white/80 dark:bg-slate-900/80 backdrop-blur-md p-4 pb-2 justify-between border-b border-slate-100 dark:border-slate-800">
+<div class="text-slate-900 dark:text-slate-100 flex size-10 shrink-0 items-center justify-center rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors cursor-pointer">
+<span class="material-symbols-outlined">arrow_back</span>
+</div>
+<h2 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight tracking-tight flex-1 text-center">Detalle de Mascota</h2>
+<div class="flex w-10 items-center justify-end">
+<button class="flex size-10 cursor-pointer items-center justify-center rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined text-slate-900 dark:text-slate-100">share</span>
+</button>
+</div>
+</div>
+<!-- Main Content -->
+<div class="flex-1 pb-32">
+<!-- Photo Gallery Section -->
+<div class="@container px-4 py-3">
+<div class="relative bg-cover bg-center flex flex-col justify-end overflow-hidden rounded-xl min-h-[350px] shadow-sm" data-alt="Photo of a fluffy white poodle dog" style='background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 40%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuDKRZ8enxue5EqIp6-C-oA0lYkl8q9dZf1s-LP_6qMli0-e_NrhVMiiFt2Dm2C_lnFRaJ_4I6q-i6EYR3CoZlplDDLCs9SlrgOhDFe5ypEfMSaiT01Fa_AxojeSWUeOkr-Mce0wLJxQbPDxXNqD-xZUsh55mR1FEnblikIEE8vU1pGBTvBE3OTQpPX2RCLH6QKVHsSPqWoFn0yDTmixiQZghuSEpPz8Hd-omcvE7iFSifZ733TdSa8QtXOkCplELRWUNLn2P0V6yXM");'>
+<div class="absolute top-4 right-4 bg-white/90 dark:bg-slate-800/90 px-3 py-1 rounded-full text-xs font-bold text-slate-900 dark:text-slate-100">
+                        1 / 5
+                    </div>
+<div class="flex justify-center gap-2 p-5">
+<div class="w-8 h-1.5 rounded-full bg-white"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-white opacity-50"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-white opacity-50"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-white opacity-50"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-white opacity-50"></div>
+</div>
+</div>
+</div>
+<!-- Pet Info -->
+<div class="px-5 pt-4">
+<div class="flex items-center justify-between mb-2">
+<h1 class="text-slate-900 dark:text-slate-100 tracking-tight text-4xl font-extrabold leading-tight">Bobby</h1>
+<div class="flex items-center gap-1 text-lost-red bg-lost-red/10 px-3 py-1 rounded-full">
+<span class="material-symbols-outlined text-[18px] font-bold">error</span>
+<p class="text-xs font-bold uppercase tracking-wider">Perdido</p>
+</div>
+</div>
+<div class="flex flex-wrap gap-2 mb-6">
+<div class="flex items-center gap-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 px-3 py-1.5">
+<span class="material-symbols-outlined text-primary text-[18px]">pets</span>
+<p class="text-slate-700 dark:text-slate-300 text-sm font-semibold">Caniche</p>
+</div>
+<div class="flex items-center gap-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 px-3 py-1.5">
+<span class="material-symbols-outlined text-primary text-[18px]">calendar_today</span>
+<p class="text-slate-700 dark:text-slate-300 text-sm font-semibold">2 años</p>
+</div>
+<div class="flex items-center gap-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 px-3 py-1.5">
+<span class="material-symbols-outlined text-primary text-[18px]">location_on</span>
+<p class="text-slate-700 dark:text-slate-300 text-sm font-semibold">Palermo</p>
+</div>
+</div>
+<!-- Description -->
+<div class="mb-8">
+<h3 class="text-slate-900 dark:text-slate-100 text-lg font-bold mb-2">Descripción</h3>
+<p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+                        Caniche blanco, collar azul, asustadizo. Se perdió cerca de Plaza Italia. Responde al nombre de Bobby pero es tímido con desconocidos.
+                    </p>
+</div>
+<!-- Map Section -->
+<div class="mb-8">
+<div class="flex items-center justify-between mb-3">
+<h3 class="text-slate-900 dark:text-slate-100 text-lg font-bold">Zona aproximada</h3>
+<span class="text-primary text-sm font-bold">Ver pantalla completa</span>
+</div>
+<div class="w-full h-48 rounded-xl overflow-hidden relative shadow-inner bg-slate-200 dark:bg-slate-800">
+<img class="w-full h-full object-cover opacity-80" data-alt="Map of Palermo neighborhood in Buenos Aires" data-location="Palermo, Buenos Aires, Argentina" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBh6nBR-52aTFwyndePllTwvI2uTsaiYQVpgxUyiqtWDwVvI1STPXWKHVQGD9N91E7nloPHePbO0q2djA371f67GBy-q3lSleA_j6BtZLBpwR5dvxEngpZU-EMrO-b2ocWp2xkh7pRp3RpTabASvWP_WJd2h0A9YjoTx4SJBtsqLeU9yqwSExELbpiO3RTczu176yUkOhNEMZ3zsZwr8ou-5IjqDO3JESBZiCj0ExukBMWYHZVyc3wks31QXXOZpbClKHrvNj7foSI"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="relative">
+<div class="absolute -inset-4 bg-primary/20 rounded-full animate-pulse"></div>
+<span class="material-symbols-outlined text-primary text-5xl relative z-10" style="font-variation-settings: 'FILL' 1">location_on</span>
+</div>
+</div>
+</div>
+<p class="mt-2 text-slate-500 dark:text-slate-500 text-xs text-center italic">Visto por última vez hace 4 horas</p>
+</div>
+</div>
+</div>
+<!-- Floating Action Buttons -->
+<div class="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[430px] p-4 bg-gradient-to-t from-white via-white dark:from-slate-900 dark:via-slate-900 to-transparent pt-10">
+<div class="flex gap-3">
+<button class="flex-1 flex items-center justify-center gap-2 bg-whatsapp-green hover:opacity-90 text-white rounded-xl py-4 font-bold transition-all shadow-lg shadow-whatsapp-green/20">
+<span class="material-symbols-outlined">chat</span>
+                    WhatsApp
+                </button>
+<button class="flex-1 flex items-center justify-center gap-2 bg-primary hover:opacity-90 text-white rounded-xl py-4 font-bold transition-all shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined">call</span>
+                    Llamar
+                </button>
+</div>
+</div>
+<!-- Navigation Bar -->
+<div class="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[430px] border-t border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-900 px-4 pb-6 pt-2 hidden">
+<!-- Hidden by design for this specific detail screen to prioritize action buttons, but template included for structure -->
+<div class="flex gap-2">
+<a class="flex flex-1 flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">home</span>
+<p class="text-[10px] font-bold">Inicio</p>
+</a>
+<a class="flex flex-1 flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">map</span>
+<p class="text-[10px] font-medium">Mapa</p>
+</a>
+<a class="flex flex-1 flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">notifications</span>
+<p class="text-[10px] font-medium">Alertas</p>
+</a>
+<a class="flex flex-1 flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">person</span>
+<p class="text-[10px] font-medium">Perfil</p>
+</a>
+</div>
+</div>
+</div>
+</body></html>

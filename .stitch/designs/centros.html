@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2b9dee",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101a22",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<title>Firulais - Centros de Ayuda</title>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased">
+<!-- Main Container (Phone Form Factor) -->
+<div class="relative mx-auto flex h-full min-h-screen max-w-[480px] flex-col bg-white dark:bg-slate-900 shadow-xl overflow-x-hidden">
+<!-- Header -->
+<div class="sticky top-0 z-20 flex items-center bg-white/80 dark:bg-slate-900/80 backdrop-blur-md px-4 py-4 justify-between border-b border-slate-100 dark:border-slate-800">
+<div class="flex items-center gap-3">
+<div class="text-primary flex size-10 items-center justify-center rounded-full bg-primary/10">
+<span class="material-symbols-outlined">arrow_back</span>
+</div>
+<div>
+<h1 class="text-lg font-bold leading-tight tracking-tight">Ayuda Cercana</h1>
+<p class="text-xs text-slate-500">Directorio Firulais</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<button class="flex size-10 items-center justify-center rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200">
+<span class="material-symbols-outlined">search</span>
+</button>
+<button class="flex size-10 items-center justify-center rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200">
+<span class="material-symbols-outlined">tune</span>
+</button>
+</div>
+</div>
+<!-- Map Section -->
+<div class="relative px-4 py-4">
+<div class="relative w-full aspect-[16/10] rounded-xl overflow-hidden shadow-sm border border-slate-200 dark:border-slate-800 bg-slate-200" data-alt="Mapa detallado de la ciudad de Buenos Aires" data-location="Buenos Aires, Argentina" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCPAOoYF6sHWt7ZvSnh4QXwkMAtQs2yGGWfCd1UvrYwdgHbloA0IVq4SkskvByTWk76wEuj-g4fDPtjb6sG09aDkdCt1mTKmabQtHWGg5zDh6AQAKfudEVWp_Ub2YbohlpaMEf0xTErbOi54rrs6hnN-1JN030TLNTr8_STjdmddORozbEbNCCMFetSxLv5cE3ffNUN-td9CTFJQ9nNwd53HipMbgzfulAQpyn0I4C2Q8KPzowgytC5M8iZ_N4N0TU3cfiwkhVUEgk'); background-position: center; background-size: cover;">
+<!-- Map Markers (Simulated) -->
+<div class="absolute top-1/4 left-1/3 group cursor-pointer">
+<div class="flex items-center justify-center size-8 bg-red-500 text-white rounded-full border-2 border-white shadow-lg animate-pulse">
+<span class="material-symbols-outlined text-sm">emergency</span>
+</div>
+</div>
+<div class="absolute bottom-1/3 right-1/4 group cursor-pointer">
+<div class="flex items-center justify-center size-8 bg-primary text-white rounded-full border-2 border-white shadow-lg">
+<span class="material-symbols-outlined text-sm">home_health</span>
+</div>
+</div>
+<div class="absolute top-1/2 right-1/2 group cursor-pointer">
+<div class="flex items-center justify-center size-8 bg-red-500 text-white rounded-full border-2 border-white shadow-lg">
+<span class="material-symbols-outlined text-sm">emergency</span>
+</div>
+</div>
+<!-- Floating Map Controls -->
+<div class="absolute bottom-3 right-3 flex flex-col gap-2">
+<button class="size-8 bg-white/90 dark:bg-slate-800/90 rounded-lg flex items-center justify-center shadow-md">
+<span class="material-symbols-outlined text-sm">my_location</span>
+</button>
+<button class="size-8 bg-white/90 dark:bg-slate-800/90 rounded-lg flex items-center justify-center shadow-md">
+<span class="material-symbols-outlined text-sm">layers</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Categories Tabs -->
+<div class="px-4">
+<div class="flex border-b border-slate-100 dark:border-slate-800 gap-6">
+<a class="flex flex-col items-center justify-center border-b-2 border-primary text-primary pb-3 pt-2" href="#">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-base">medical_services</span>
+<p class="text-sm font-bold">Veterinarias</p>
+</div>
+</a>
+<a class="flex flex-col items-center justify-center border-b-2 border-transparent text-slate-500 dark:text-slate-400 pb-3 pt-2" href="#">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-base">holiday_village</span>
+<p class="text-sm font-medium">Refugios</p>
+</div>
+</a>
+<a class="flex flex-col items-center justify-center border-b-2 border-transparent text-slate-500 dark:text-slate-400 pb-3 pt-2" href="#">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-base">storefront</span>
+<p class="text-sm font-medium">Pet Shops</p>
+</div>
+</a>
+</div>
+</div>
+<!-- Service List -->
+<div class="flex-1 px-4 py-4 space-y-4">
+<!-- List Item 1 -->
+<div class="flex flex-col gap-3 p-4 rounded-xl border border-slate-100 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-800/30">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-3">
+<div class="flex size-12 shrink-0 items-center justify-center rounded-lg bg-red-100 dark:bg-red-900/30 text-red-600 dark:text-red-400">
+<span class="material-symbols-outlined">emergency</span>
+</div>
+<div class="flex flex-col">
+<h3 class="text-base font-bold text-slate-900 dark:text-slate-100">Veterinaria San Roque</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400">Av. Rivadavia 4500, CABA</p>
+</div>
+</div>
+<span class="inline-flex items-center rounded-full bg-green-100 px-2 py-0.5 text-xs font-medium text-green-700">Abierto</span>
+</div>
+<div class="flex gap-2 pt-1">
+<button class="flex flex-1 items-center justify-center gap-2 rounded-lg bg-primary h-10 text-white text-sm font-bold shadow-sm shadow-primary/20">
+<span class="material-symbols-outlined text-lg">directions</span>
+                        Cómo llegar
+                    </button>
+<button class="flex items-center justify-center gap-2 px-4 rounded-lg bg-slate-100 dark:bg-slate-800 h-10 text-slate-700 dark:text-slate-200 text-sm font-bold">
+<span class="material-symbols-outlined text-lg">call</span>
+                        Llamar
+                    </button>
+</div>
+</div>
+<!-- List Item 2 -->
+<div class="flex flex-col gap-3 p-4 rounded-xl border border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-800/20">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-3">
+<div class="flex size-12 shrink-0 items-center justify-center rounded-lg bg-blue-100 dark:bg-blue-900/30 text-primary">
+<span class="material-symbols-outlined">health_and_safety</span>
+</div>
+<div class="flex flex-col">
+<h3 class="text-base font-bold text-slate-900 dark:text-slate-100">Clínica Veterinaria Sur</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400">Av. Hipólito Yrigoyen 820, Lanús</p>
+</div>
+</div>
+</div>
+<div class="flex gap-2 pt-1">
+<button class="flex flex-1 items-center justify-center gap-2 rounded-lg bg-primary/10 h-10 text-primary text-sm font-bold">
+<span class="material-symbols-outlined text-lg">directions</span>
+                        Cómo llegar
+                    </button>
+<button class="flex items-center justify-center gap-2 px-4 rounded-lg bg-slate-100 dark:bg-slate-800 h-10 text-slate-700 dark:text-slate-200 text-sm font-bold">
+<span class="material-symbols-outlined text-lg">call</span>
+                        Llamar
+                    </button>
+</div>
+</div>
+<!-- List Item 3 (Refugio) -->
+<div class="flex flex-col gap-3 p-4 rounded-xl border border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-800/20">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-3">
+<div class="flex size-12 shrink-0 items-center justify-center rounded-lg bg-amber-100 dark:bg-amber-900/30 text-amber-600">
+<span class="material-symbols-outlined">holiday_village</span>
+</div>
+<div class="flex flex-col">
+<h3 class="text-base font-bold text-slate-900 dark:text-slate-100">Refugio El Amparo</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400">Calle 14 nro 452, Berazategui</p>
+</div>
+</div>
+</div>
+<div class="flex gap-2 pt-1">
+<button class="flex flex-1 items-center justify-center gap-2 rounded-lg bg-primary/10 h-10 text-primary text-sm font-bold">
+<span class="material-symbols-outlined text-lg">directions</span>
+                        Cómo llegar
+                    </button>
+<button class="flex items-center justify-center gap-2 px-4 rounded-lg bg-slate-100 dark:bg-slate-800 h-10 text-slate-700 dark:text-slate-200 text-sm font-bold">
+<span class="material-symbols-outlined text-lg">call</span>
+                        Llamar
+                    </button>
+</div>
+</div>
+</div>
+<!-- Bottom Navigation Bar (iOS Style) -->
+<div class="sticky bottom-0 z-30 flex w-full border-t border-slate-100 dark:border-slate-800 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md px-4 pb-8 pt-2">
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400 dark:text-slate-500" href="#">
+<span class="material-symbols-outlined text-[26px]">home</span>
+<p class="text-[10px] font-medium uppercase tracking-wider">Inicio</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined text-[26px]" style="font-variation-settings: 'FILL' 1">map</span>
+<p class="text-[10px] font-bold uppercase tracking-wider">Mapa</p>
+</a>
+<div class="flex flex-1 flex-col items-center justify-center -mt-8">
+<div class="flex size-14 items-center justify-center rounded-full bg-primary shadow-lg shadow-primary/30 text-white border-4 border-white dark:border-slate-900">
+<span class="material-symbols-outlined text-3xl">add</span>
+</div>
+<p class="mt-1 text-[10px] font-medium text-slate-400 uppercase tracking-wider">Reportar</p>
+</div>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400 dark:text-slate-500" href="#">
+<span class="material-symbols-outlined text-[26px]">pets</span>
+<p class="text-[10px] font-medium uppercase tracking-wider">Mascotas</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400 dark:text-slate-500" href="#">
+<span class="material-symbols-outlined text-[26px]">person</span>
+<p class="text-[10px] font-medium uppercase tracking-wider">Perfil</p>
+</a>
+</div>
+<!-- iOS Home Indicator -->
+<div class="absolute bottom-1 left-1/2 h-1.5 w-32 -translate-x-1/2 rounded-full bg-slate-300 dark:bg-slate-700"></div>
+</div>
+</body></html>

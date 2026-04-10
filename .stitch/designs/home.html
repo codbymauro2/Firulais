@@ -1,0 +1,205 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>PawFinder - Home</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2b9dee",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101a22",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100">
+<div class="relative flex h-auto min-h-screen w-full max-w-[430px] mx-auto flex-col bg-white dark:bg-background-dark shadow-2xl overflow-x-hidden">
+<!-- Header -->
+<div class="flex items-center bg-white dark:bg-background-dark p-4 pb-2 justify-between sticky top-0 z-10 border-b border-slate-100 dark:border-slate-800">
+<div class="text-slate-900 dark:text-slate-100 flex size-12 shrink-0 items-center justify-start">
+<span class="material-symbols-outlined text-2xl" style="">menu</span>
+</div>
+<h2 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center" style="">Inicio</h2>
+<div class="flex w-12 items-center justify-end">
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-12 bg-transparent text-primary gap-2 text-base font-bold leading-normal tracking-[0.015em] min-w-0 p-0" style="">
+<span class="material-symbols-outlined text-3xl" style="">account_circle</span>
+</button>
+</div>
+</div>
+<!-- Search Bar -->
+<div class="px-4 py-3 bg-white dark:bg-background-dark">
+<label class="flex flex-col min-w-40 h-12 w-full" style="">
+<div class="flex w-full flex-1 items-stretch rounded-xl h-full">
+<div class="text-slate-400 flex border-none bg-slate-100 dark:bg-slate-800 items-center justify-center pl-4 rounded-l-xl">
+<span class="material-symbols-outlined" style="">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-r-xl text-slate-900 dark:text-slate-100 focus:outline-0 focus:ring-0 border-none bg-slate-100 dark:bg-slate-800 h-full placeholder:text-slate-500 px-4 pl-2 text-base font-normal leading-normal" placeholder="Search by breed, color, or location" value="">
+</div>
+</label>
+</div>
+<!-- Categories/Quick Actions -->
+<div class="flex w-full overflow-x-auto px-4 py-3 bg-white dark:bg-background-dark no-scrollbar">
+<div class="flex min-h-min flex-row items-start justify-start gap-6">
+<div class="flex flex-1 flex-col items-center justify-center gap-2 w-16 text-center">
+<div class="w-14 h-14 bg-red-100 dark:bg-red-900/30 flex items-center justify-center rounded-full text-red-600">
+<span class="material-symbols-outlined" style="">emergency</span>
+</div>
+<p class="text-slate-900 dark:text-slate-100 text-[13px] font-medium leading-normal" style="">Urgent</p>
+</div>
+<div class="flex flex-1 flex-col items-center justify-center gap-2 w-16 text-center">
+<div class="w-14 h-14 bg-primary/10 dark:bg-primary/20 flex items-center justify-center rounded-full text-primary">
+<span class="material-symbols-outlined" style="">near_me</span>
+</div>
+<p class="text-slate-900 dark:text-slate-100 text-[13px] font-medium leading-normal" style="">Nearby</p>
+</div>
+<div class="flex flex-1 flex-col items-center justify-center gap-2 w-16 text-center">
+<div class="w-14 h-14 bg-amber-100 dark:bg-amber-900/30 flex items-center justify-center rounded-full text-amber-600">
+<span class="material-symbols-outlined" style="">notifications_active</span>
+</div>
+<p class="text-slate-900 dark:text-slate-100 text-[13px] font-medium leading-normal" style="">Alerts</p>
+</div>
+<div class="flex flex-1 flex-col items-center justify-center gap-2 w-16 text-center">
+<div class="w-14 h-14 bg-emerald-100 dark:bg-emerald-900/30 flex items-center justify-center rounded-full text-emerald-600">
+<span class="material-symbols-outlined" style="">pets</span>
+</div>
+<p class="text-slate-900 dark:text-slate-100 text-[13px] font-medium leading-normal" style="">Stories</p>
+</div>
+<div class="flex flex-1 flex-col items-center justify-center gap-2 w-16 text-center">
+<div class="w-14 h-14 bg-slate-100 dark:bg-slate-800 flex items-center justify-center rounded-full text-slate-600 dark:text-slate-400">
+<span class="material-symbols-outlined" style="">workspace_premium</span>
+</div>
+<p class="text-slate-900 dark:text-slate-100 text-[13px] font-medium leading-normal" style="">Heroes</p>
+</div>
+</div>
+</div>
+<!-- Main Content Section -->
+<div class="flex-1 bg-background-light dark:bg-background-dark pb-24">
+<div class="flex items-center justify-between px-4 pb-3 pt-5">
+<h2 class="text-slate-900 dark:text-slate-100 text-[22px] font-bold leading-tight tracking-[-0.015em]" style="">Recent Reports</h2>
+<button class="text-primary text-sm font-semibold" style="">See All</button>
+</div>
+<!-- Report Cards List -->
+<div class="flex flex-col gap-4 px-4">
+<!-- Card 1 -->
+<div class="bg-white dark:bg-slate-900 rounded-xl overflow-hidden border border-slate-100 dark:border-slate-800 shadow-sm">
+<div class="relative h-48 w-full bg-slate-200 dark:bg-slate-800">
+<img alt="Lost beagle dog" class="w-full h-full object-cover" data-alt="A sad looking beagle dog standing in a yard" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAoSXZfDr9BCp9TM9y8yOoBNgkkYdHB5eOFVJ79L9HlFD2j-NwSrzSMNdlFiUPKkAnt7T0UNvhjI-MQ-cA_Fno16GYWJQLmplsNxfuYVpJYBOEphueSYERylnSQNyvkxCslbLuGB3GzoWk31wd4STSrPLhxJTnKshtZHRAC9n1ty5iRVWcfbsrpt7kpwoWbh7D5g56udWZEqmE0sew8anAbyNnpFujWo2H24lp5y9TJ-RUelNWSB4g71dYcraJnERUVFJc5dLNms0" style="">
+<div class="absolute top-3 right-3 bg-red-600 text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider" style="">
+                            Lost
+                        </div>
+</div>
+<div class="p-4">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-lg font-bold text-slate-900 dark:text-slate-100 leading-tight" style="">Max (Beagle Mix)</h3>
+<span class="text-primary font-bold" style="">$200 Reward</span>
+</div>
+<div class="flex items-center gap-1 text-slate-500 dark:text-slate-400 text-sm mb-3">
+<span class="material-symbols-outlined text-lg" style="">location_on</span>
+<span class="" style="">Downtown Brooklyn, NY</span>
+</div>
+<div class="flex items-center justify-between pt-3 border-t border-slate-100 dark:border-slate-800">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center overflow-hidden">
+<img alt="User Profile" class="w-full h-full object-cover" data-alt="Portrait of a young man smiling" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6CMNv-Z24S3KODeiMTnshI3PtpJmXwXd_yHe79wcJIXssrmQqmX7CreoOeZP10PTxiV02N0f2oFnoAG1HfENE3mdoqcyIhLeewW7kfmfvoHjKFdPI1HJFATbF6ZPpEb1934Z1OAjPVA42DbesaYQGuzrBrao2_KlXdKlUFxOkoNJ-GImprC9DgdXt9ZjckNcimuwdm-H7MmR1ci6LGg7ri9P8lZrS0loQ-34PrfjZ1wJYnZG3pllMG0WloU-mDRXGQMwWh7wYN-M" style="">
+</div>
+<span class="text-sm font-medium" style="">Sarah J.</span>
+</div>
+<span class="text-xs text-slate-400" style="">2h ago</span>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-white dark:bg-slate-900 rounded-xl overflow-hidden border border-slate-100 dark:border-slate-800 shadow-sm">
+<div class="relative h-48 w-full bg-slate-200 dark:bg-slate-800">
+<img alt="Found tabby cat" class="w-full h-full object-cover" data-alt="A cute tabby cat sitting on a porch" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyytKEdu2fznYzDrXikm5ZOIO6xiJch84D1BccL7kPTcnkIFjs4-9nVnblUgSxQ4JvbJQTwdM8nlCoi47pcvyb1wVYYPELajsBmttV4_x9hloElvy-6dDKHsdRJRx6M3HckfBi4lX-uYPFP64wxVY0zLdVzHWnZb6qREx5saRyFnCct3tAALrT2g8gEnb1POjwyocKZrmxeUcexHWTcmyXM3g52Q90OmIdGrVe5brXuJMdyaD_A9PoLvBVA5UIv6GO_NeYaADCB2g" style="">
+<div class="absolute top-3 right-3 bg-emerald-600 text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider" style="">
+                            Found
+                        </div>
+</div>
+<div class="p-4">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-lg font-bold text-slate-900 dark:text-slate-100 leading-tight" style="">Tabby Cat (No collar)</h3>
+<span class="text-emerald-600 font-bold" style="">Safe</span>
+</div>
+<div class="flex items-center gap-1 text-slate-500 dark:text-slate-400 text-sm mb-3">
+<span class="material-symbols-outlined text-lg" style="">location_on</span>
+<span class="" style="">Park Slope, Brooklyn</span>
+</div>
+<div class="flex items-center justify-between pt-3 border-t border-slate-100 dark:border-slate-800">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center overflow-hidden">
+<img alt="User Profile" class="w-full h-full object-cover" data-alt="Portrait of a woman with long hair" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmK87_npE9dXAdcQAnTepeo58JgT_iDeBeUm92_-Ka0A3UUoNxBa0k5xXClgoaoe8AAB7sTWm3mp_ZGDzzhTgBQSoJ5PHI2Xa4iaF0P7YtwIB14GLxVX5fIzCLNa7Uidh8HmO0Pmc1Hw4rs7eywG9os1uGJNdhyk5I38bXQ-ncIXIRzW1UZFtCY8ARbxMwwOmWLyWTt4YAUvWWkf7ZkwBiKi11KKOWLbvnTiymVkl89sowcSJnnnCq0rDNmfraGf6d-UbaUKSb_sk" style="">
+</div>
+<span class="text-sm font-medium" style="">Mike R.</span>
+</div>
+<span class="text-xs text-slate-400" style="">5h ago</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Floating Action Button -->
+<button class="fixed bottom-24 right-6 w-14 h-14 bg-primary text-white rounded-full shadow-lg flex items-center justify-center z-20" style="">
+<span class="material-symbols-outlined text-3xl" style="">add</span>
+</button>
+<!-- Bottom Navigation Bar -->
+<div class="fixed bottom-0 left-0 right-0 max-w-[430px] mx-auto border-t border-slate-100 dark:border-slate-800 bg-white dark:bg-background-dark px-4 pb-6 pt-2 z-30">
+<div class="flex gap-2">
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-primary" href="#" style="">
+<div class="flex h-8 items-center justify-center">
+<span class="material-symbols-outlined text-[28px] fill-1" style="">home</span>
+</div>
+<p class="text-xs font-bold leading-normal tracking-[0.015em]" style="">Inicio</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-500 dark:text-slate-400" href="#" style="">
+<div class="flex h-8 items-center justify-center">
+<span class="material-symbols-outlined text-[28px]" style="">map</span>
+</div>
+<p class="text-xs font-medium leading-normal tracking-[0.015em]" style="">Mapa</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-500 dark:text-slate-400" href="#" style="">
+<div class="flex h-8 items-center justify-center">
+<span class="material-symbols-outlined text-[28px]" style="">chat_bubble</span>
+</div>
+<p class="text-xs font-medium leading-normal tracking-[0.015em]" style="">Mensajes</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-500 dark:text-slate-400" href="#" style="">
+<div class="flex h-8 items-center justify-center">
+<span class="material-symbols-outlined text-[28px]" style="">person</span>
+</div>
+<p class="text-xs font-medium leading-normal tracking-[0.015em]" style="">Perfil</p>
+</a>
+</div>
+</div>
+</div>
+<style>
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .fill-1 {
+            font-variation-settings: 'FILL' 1;
+        }
+    </style>
+</body></html>

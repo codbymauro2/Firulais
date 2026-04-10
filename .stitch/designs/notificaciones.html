@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2b9dee",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101a22",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen flex flex-col">
+<!-- Header / Top Bar -->
+<header class="sticky top-0 z-10 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+<div class="flex items-center p-4 justify-between max-w-md mx-auto w-full">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-2xl">arrow_back_ios</span>
+<h1 class="text-xl font-bold tracking-tight">Notificaciones</h1>
+</div>
+<button class="flex items-center justify-center rounded-full p-2 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined text-slate-600 dark:text-slate-400">settings</span>
+</button>
+</div>
+<!-- Tabs -->
+<div class="max-w-md mx-auto w-full">
+<div class="flex px-4 gap-8">
+<a class="flex flex-col items-center justify-center border-b-2 border-primary text-primary pb-3 pt-2" href="#">
+<p class="text-sm font-bold">Todas</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-2 border-transparent text-slate-500 dark:text-slate-400 pb-3 pt-2" href="#">
+<p class="text-sm font-bold">No leídas</p>
+</a>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-1 max-w-md mx-auto w-full overflow-y-auto pb-24">
+<!-- Section Label -->
+<div class="px-4 py-4">
+<h3 class="text-xs font-bold uppercase tracking-wider text-slate-400">Recientes</h3>
+</div>
+<!-- Notification Card 1 (Unread Style) -->
+<div class="flex gap-4 bg-primary/5 dark:bg-primary/10 px-4 py-4 mb-1 border-l-4 border-primary">
+<div class="shrink-0 relative">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-16" data-alt="Golden Retriever looking curious in a park" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA9BlhAAI5KVsa-vIqyCRK--Rht0j1h-mGieJIb9dEQKmAY-X_xYLKT7fMFFzIP37DkQqXm4c39ly4-E0cGdiAUemTHOOFdWrXdn9xTOs8FEdl2bIo8eMNFCVZCKhZ0pcu9q6nw1jKPpMTYL_FcEbvLACCC-cBo2wodKDjpx8IYxZManir9-787QY2s1CVCgD64-4d20RsY7KCpukj5UjCJVTeFr8jYZkeFjLc82ZAKgyWhLZKDh1-gRY7CKP99VLsxzY-XBc1M8sc");'>
+</div>
+<div class="absolute -bottom-1 -right-1 bg-red-500 rounded-full border-2 border-white dark:border-background-dark p-1">
+<span class="material-symbols-outlined text-[10px] text-white font-bold leading-none">location_on</span>
+</div>
+</div>
+<div class="flex flex-1 flex-col justify-center min-w-0">
+<div class="flex justify-between items-start">
+<p class="text-slate-900 dark:text-slate-100 text-sm font-bold leading-tight line-clamp-2">
+                        ¡Alerta! Se vio un perro parecido al tuyo en Recoleta
+                    </p>
+<span class="text-[10px] font-medium text-primary ml-2 shrink-0">Ahora</span>
+</div>
+<p class="text-slate-600 dark:text-slate-400 text-xs mt-1 font-medium">Visto hace poco cerca de Plaza Francia.</p>
+<div class="flex items-center mt-2 text-primary gap-1">
+<span class="material-symbols-outlined text-sm">map</span>
+<span class="text-xs font-bold">Ver en el mapa</span>
+</div>
+</div>
+</div>
+<!-- Notification Card 2 -->
+<div class="flex gap-4 bg-white dark:bg-slate-900/40 px-4 py-4 mb-1 border-b border-slate-100 dark:border-slate-800">
+<div class="shrink-0">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-12" data-alt="Close up of a cute grey tabby cat" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDsi2nVdsaHDtvq2npqptGcROOMhfFmRwMthdWJmx579owZzSlit_zss_6uYGJ7n7BuMjQg5At-cyGU5yARpemX-hLxi2MQR-k2q-OmksZoJmMHJozMfH84RXI1YWwNX_ABVAdkN19I1THIU6fnIzB1k67oIeVMHlrBKZCl4z0mIJY2P9EdjpglhIb9evfEzgUZ93Oaay4OtcyEQOYR-57YwAivPua9n0T3MoHQ3ceUSG3glYBjuZ5lzJvmnQE-OfTbRH-fWf7ZI0g");'>
+</div>
+</div>
+<div class="flex flex-1 flex-col justify-center min-w-0">
+<div class="flex justify-between items-start">
+<p class="text-slate-800 dark:text-slate-200 text-sm font-semibold leading-tight line-clamp-1">
+                        Alguien comentó tu publicación de Michi
+                    </p>
+<span class="text-[10px] text-slate-400 ml-2 shrink-0">15 min</span>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-xs italic mt-1 line-clamp-2">
+                    "¡Qué lindo gatito! Espero que aparezca pronto."
+                </p>
+</div>
+</div>
+<!-- Section Label -->
+<div class="px-4 py-6">
+<h3 class="text-xs font-bold uppercase tracking-wider text-slate-400">Ayer</h3>
+</div>
+<!-- Notification Card 3 -->
+<div class="flex gap-4 bg-white dark:bg-slate-900/40 px-4 py-4 mb-1 border-b border-slate-100 dark:border-slate-800">
+<div class="shrink-0">
+<div class="bg-primary/10 rounded-full size-12 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">volunteer_activism</span>
+</div>
+</div>
+<div class="flex flex-1 flex-col justify-center min-w-0">
+<div class="flex justify-between items-start">
+<p class="text-slate-800 dark:text-slate-200 text-sm font-semibold leading-tight">
+                        ¡Nueva comunidad en Palermo!
+                    </p>
+<span class="text-[10px] text-slate-400 ml-2 shrink-0">1d</span>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-xs mt-1">Más de 50 vecinos se unieron a la red de búsqueda en tu zona.</p>
+</div>
+</div>
+<!-- Notification Card 4 -->
+<div class="flex gap-4 bg-white dark:bg-slate-900/40 px-4 py-4 mb-1 border-b border-slate-100 dark:border-slate-800">
+<div class="shrink-0">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-12" data-alt="Small brown dog wearing a red harness" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDQEtpnw76qtk0J-qx9cpnpgdx43aU4T9A2vT9cldKMBL1FdOKUHPm1Zj3cbKje5AW8fp1hCc0OMFc1NXd_vnSYWA1XMvBbgEtdNX_CqeK5JnZ3s7dugqzrNjPkvhuaFfcIjN5SrRhxCjl-cLJKmZ6aVJLIjUHDdupHRCCAXBvmH7U8rEXqZp_6yh1rdI4Fw_-0jVmhV4KWRYDA0PabtC0hV4c8A7JNG6cdZTH5ihcR16ua40-Kd8iI02ye1ZAR8j2Fts-RZG7a6nI");'>
+</div>
+</div>
+<div class="flex flex-1 flex-col justify-center min-w-0">
+<div class="flex justify-between items-start">
+<p class="text-slate-800 dark:text-slate-200 text-sm font-semibold leading-tight">
+                        Tu publicación ha sido compartida
+                    </p>
+<span class="text-[10px] text-slate-400 ml-2 shrink-0">1d</span>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-xs mt-1">Firulais fue compartido 12 veces en grupos de WhatsApp locales.</p>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 right-0 bg-white dark:bg-background-dark border-t border-slate-200 dark:border-slate-800 pb-safe">
+<div class="max-w-md mx-auto flex h-16 items-center px-4">
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400 dark:text-slate-500" href="#">
+<span class="material-symbols-outlined">map</span>
+<p class="text-[10px] font-bold">Mapa</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400 dark:text-slate-500" href="#">
+<span class="material-symbols-outlined">add_circle</span>
+<p class="text-[10px] font-bold">Reportar</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">notifications</span>
+<p class="text-[10px] font-bold">Alertas</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400 dark:text-slate-500" href="#">
+<span class="material-symbols-outlined">person</span>
+<p class="text-[10px] font-bold">Perfil</p>
+</a>
+</div>
+</nav>
+<!-- Map Placeholder for data attribute requirement -->
+<div class="hidden" data-location="Buenos Aires, Argentina" style=""></div>
+</body></html>

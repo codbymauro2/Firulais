@@ -1,0 +1,28 @@
+name: Generar embeddings de mascotas
+
+on:
+  schedule:
+    - cron: "0 3 * * *"   # todos los días a las 3am UTC
+  workflow_dispatch:        # también se puede correr manualmente desde GitHub
+
+jobs:
+  embeddings:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Instalar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Instalar dependencias
+        run: pip install torch torchvision timm rembg pillow requests supabase numpy --index-url https://download.pytorch.org/whl/cpu
+
+      - name: Correr script
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+        run: python scripts/generate_embeddings.py

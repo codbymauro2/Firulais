@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Filtros de Búsqueda Firulais</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2b9dee",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101a22",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100">
+<div class="relative flex h-screen w-full flex-col bg-background-light dark:bg-background-dark overflow-x-hidden mx-auto max-w-[430px] border-x border-slate-200 dark:border-slate-800">
+<!-- TopAppBar -->
+<div class="flex items-center bg-white dark:bg-background-dark p-4 pb-2 justify-between sticky top-0 z-10 border-b border-slate-100 dark:border-slate-800">
+<div class="text-slate-900 dark:text-slate-100 flex size-12 shrink-0 items-center justify-start cursor-pointer">
+<span class="material-symbols-outlined">close</span>
+</div>
+<h2 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">Filtros de Búsqueda</h2>
+<div class="flex w-12 items-center justify-end">
+<p class="text-primary text-base font-bold leading-normal tracking-[0.015em] shrink-0 cursor-pointer">Limpiar</p>
+</div>
+</div>
+<!-- Filter Content -->
+<div class="flex-1 overflow-y-auto pb-32">
+<!-- Especie -->
+<h3 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-6">Especie</h3>
+<div class="flex gap-3 px-4 py-2 flex-wrap">
+<div class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-xl bg-primary text-white px-5 shadow-sm">
+<span class="material-symbols-outlined text-[20px]">pets</span>
+<p class="text-sm font-semibold">Perro</p>
+</div>
+<div class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 px-5">
+<span class="material-symbols-outlined text-[20px] text-slate-500">pets</span>
+<p class="text-slate-700 dark:text-slate-300 text-sm font-medium">Gato</p>
+</div>
+<div class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 px-5">
+<span class="material-symbols-outlined text-[20px] text-slate-500">more_horiz</span>
+<p class="text-slate-700 dark:text-slate-300 text-sm font-medium">Otros</p>
+</div>
+</div>
+<!-- Tamaño -->
+<h3 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-6">Tamaño</h3>
+<div class="flex gap-3 px-4 py-2 flex-wrap">
+<div class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 px-5">
+<p class="text-slate-700 dark:text-slate-300 text-sm font-medium">Pequeño</p>
+</div>
+<div class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-xl bg-primary text-white px-5 shadow-sm">
+<p class="text-sm font-semibold">Mediano</p>
+</div>
+<div class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 px-5">
+<p class="text-slate-700 dark:text-slate-300 text-sm font-medium">Grande</p>
+</div>
+</div>
+<!-- Color de pelaje -->
+<h3 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-6">Color de pelaje</h3>
+<div class="flex gap-3 px-4 py-2 flex-wrap">
+<div class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 px-4">
+<div class="size-4 rounded-full bg-black border border-slate-200"></div>
+<p class="text-slate-700 dark:text-slate-300 text-sm font-medium">Negro</p>
+</div>
+<div class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 px-4">
+<div class="size-4 rounded-full bg-white border border-slate-200"></div>
+<p class="text-slate-700 dark:text-slate-300 text-sm font-medium">Blanco</p>
+</div>
+<div class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 px-4">
+<div class="size-4 rounded-full bg-[#8B4513]"></div>
+<p class="text-slate-700 dark:text-slate-300 text-sm font-medium">Marrón</p>
+</div>
+<div class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 px-4">
+<div class="size-4 rounded-full bg-slate-400"></div>
+<p class="text-slate-700 dark:text-slate-300 text-sm font-medium">Gris</p>
+</div>
+</div>
+<!-- Rango de fechas -->
+<h3 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-6">Fecha de desaparición</h3>
+<div class="px-4 py-2 grid grid-cols-2 gap-4">
+<div class="flex flex-col gap-1">
+<label class="text-xs font-bold text-slate-500 uppercase tracking-wider">Desde</label>
+<div class="flex items-center bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg p-3">
+<span class="material-symbols-outlined text-slate-400 mr-2 text-[20px]">calendar_today</span>
+<span class="text-sm text-slate-600 dark:text-slate-400">01/10/2023</span>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<label class="text-xs font-bold text-slate-500 uppercase tracking-wider">Hasta</label>
+<div class="flex items-center bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg p-3">
+<span class="material-symbols-outlined text-slate-400 mr-2 text-[20px]">calendar_today</span>
+<span class="text-sm text-slate-600 dark:text-slate-400">Hoy</span>
+</div>
+</div>
+</div>
+<!-- Distancia máxima -->
+<div class="px-4 pt-6">
+<div class="flex justify-between items-center mb-4">
+<h3 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight tracking-[-0.015em]">Distancia máxima</h3>
+<span class="text-primary font-bold">15 km</span>
+</div>
+<div class="relative w-full h-6 flex items-center">
+<div class="absolute w-full h-1.5 bg-slate-200 dark:bg-slate-700 rounded-full"></div>
+<div class="absolute w-[60%] h-1.5 bg-primary rounded-full"></div>
+<div class="absolute left-[60%] size-6 bg-white border-2 border-primary rounded-full shadow-md -ml-3 cursor-pointer"></div>
+</div>
+<div class="flex justify-between mt-2">
+<span class="text-xs text-slate-500">1 km</span>
+<span class="text-xs text-slate-500">50 km</span>
+</div>
+</div>
+<!-- Ubicación de referencia -->
+<h3 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-6">Ubicación de referencia</h3>
+<div class="px-4 pb-4">
+<div class="relative h-40 w-full rounded-xl overflow-hidden mb-2">
+<img class="w-full h-full object-cover" data-alt="Mapa de la ciudad de Buenos Aires" data-location="Buenos Aires" src="https://lh3.googleusercontent.com/aida-public/AB6AXuClgTtmOzULycOA_8O_ecOGgfXtTq2IC621aWuX-3NNrNQvQ95-IqLD31Lu-KWz96zrzs0k154yOa4zgVek4qOVaCp31hGya125rPYXRLRLV9_54flNYnb3dNy7Drl6pYk-a7c6_KytD4Di07mnfwQ8faGuV1E7AxZ0A6eJ2HOTrcFemvaLuUZ_8ASAJDENgXFaaQ2v3CSgoCU_OA9fsIvmQVPa06TqGIY4xZQOwBrtJ4HbFo-5Ey0zKmj1d2Kbp2Zvi1Rgh_RtP-g"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-4xl" style="font-variation-settings: 'FILL' 1">location_on</span>
+</div>
+</div>
+<p class="text-sm text-slate-500 text-center">Palermo, Ciudad Autónoma de Buenos Aires</p>
+</div>
+</div>
+<!-- Footer Button -->
+<div class="absolute bottom-0 left-0 w-full p-4 bg-white dark:bg-background-dark border-t border-slate-100 dark:border-slate-800">
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 rounded-xl shadow-lg transition-colors flex items-center justify-center gap-2">
+<span>Aplicar Filtros</span>
+<span class="material-symbols-outlined text-[20px]">search</span>
+</button>
+</div>
+</div>
+</body></html>

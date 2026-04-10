@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#2b9dee",
+              "background-light": "#f6f7f8",
+              "background-dark": "#101a22",
+            },
+            fontFamily: {
+              "display": ["Plus Jakarta Sans"]
+            },
+            borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<title>Mi Perfil Firulais</title>
+<style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100">
+<div class="relative flex min-h-screen w-full flex-col max-w-[430px] mx-auto bg-white dark:bg-background-dark shadow-2xl overflow-x-hidden">
+<div class="flex items-center bg-white dark:bg-background-dark p-4 pb-2 justify-between sticky top-0 z-10 border-b border-slate-100 dark:border-slate-800">
+<div class="text-slate-900 dark:text-slate-100 flex size-12 shrink-0 items-center">
+<span class="material-symbols-outlined cursor-pointer">arrow_back_ios</span>
+</div>
+<h2 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">Mi Perfil</h2>
+<div class="flex w-12 items-center justify-end">
+<button class="flex cursor-pointer items-center justify-center rounded-xl h-12 bg-transparent text-slate-900 dark:text-slate-100">
+<span class="material-symbols-outlined">settings</span>
+</button>
+</div>
+</div>
+<div class="flex p-6">
+<div class="flex w-full flex-col gap-4 items-center">
+<div class="flex gap-4 flex-col items-center">
+<div class="relative">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full min-h-32 w-32 border-4 border-white dark:border-slate-800 shadow-lg" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDYfKmsOkHvBN9BTQ2qv8tfkHqAUhSaLvBRDtg4gAsuA8QveGO7WZ7xpRP4k9xMHyUlA0HlyeodNSQT-L-CJSYg2Dad4dEDl4wuGZzhbElnuXYXc7RbzIKBWD_IxDxpsFv19f5ElgSGjkoKWog7TtZX6reJYIce0thMLxlWyx7GwM2VAxqP053KdmOYnoq7uWkpEsZDbOv8ZIi8eIp8NrH_pRZQ5aDDLJ06QGxE1bLDngy5VMK5xLv6tlbWBgqnmQqtcfln-GMSWG4");'>
+</div>
+<div class="absolute bottom-0 right-0 bg-primary text-white p-2 rounded-full border-2 border-white dark:border-slate-800">
+<span class="material-symbols-outlined text-sm">edit</span>
+</div>
+</div>
+<div class="flex flex-col items-center justify-center text-center">
+<p class="text-slate-900 dark:text-slate-100 text-[24px] font-bold leading-tight tracking-[-0.015em]">Alejandro Firu</p>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium leading-normal">Miembro desde octubre 2023</p>
+</div>
+</div>
+</div>
+</div>
+<div class="flex flex-wrap gap-3 px-6 py-2">
+<div class="flex min-w-[111px] flex-1 basis-[fit-content] flex-col gap-1 rounded-2xl border border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-900/50 p-4 items-center text-center shadow-sm">
+<p class="text-primary tracking-light text-3xl font-bold leading-tight">12</p>
+<p class="text-slate-500 dark:text-slate-400 text-[10px] font-semibold uppercase tracking-wider">Reportes realizados</p>
+</div>
+<div class="flex min-w-[111px] flex-1 basis-[fit-content] flex-col gap-1 rounded-2xl border border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-900/50 p-4 items-center text-center shadow-sm">
+<p class="text-primary tracking-light text-3xl font-bold leading-tight">8</p>
+<p class="text-slate-500 dark:text-slate-400 text-[10px] font-semibold uppercase tracking-wider">Mascotas rescatadas</p>
+</div>
+</div>
+<div class="px-6 pt-8 pb-4">
+<div class="flex items-center justify-between mb-4">
+<h3 class="text-slate-900 dark:text-slate-100 text-xl font-bold leading-tight tracking-[-0.015em]">Mis publicaciones activas</h3>
+<span class="text-primary text-sm font-bold cursor-pointer">Ver todas</span>
+</div>
+<div class="flex flex-col gap-4">
+<div class="flex gap-4 p-3 rounded-2xl bg-white dark:bg-slate-900/50 border border-slate-100 dark:border-slate-800 shadow-sm">
+<div class="w-24 h-24 rounded-xl bg-cover bg-center shrink-0" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAxMJeZK1YHxunbUI8NoyOBdImqJI4zIh6_6G9qzyWustpBsG7zwzi1wy4irH8ZHNJzDd9l2abtv9gp0-koDdEQyYJZuw0-4ps3baxnN8iVGFQxhcl-e9LJMsUJHIkyRo41YwpULHN2Ma-0DJt3-dV_JnWv30wNLU0sYX2CHQxg4uxFk1xrFSgti0YxHomqxhXlfEuMEaF6gp96SA7Xs442NX1fC216HvSy_S31GqMbe3pyZ2ex8HKFNS3X1fdHOYl8R8-tMDolAyU");'></div>
+<div class="flex flex-col justify-between py-1 flex-1">
+<div>
+<div class="flex justify-between items-start">
+<span class="bg-primary/10 text-primary text-[10px] font-bold px-2 py-1 rounded-full uppercase tracking-wide">Perdido</span>
+<span class="text-slate-400 text-xs">Hace 2 d</span>
+</div>
+<p class="text-slate-900 dark:text-slate-100 font-bold text-lg mt-1">Cooper</p>
+<p class="text-slate-500 dark:text-slate-400 text-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">location_on</span> Palermo, CABA
+                            </p>
+</div>
+</div>
+</div>
+<div class="flex gap-4 p-3 rounded-2xl bg-white dark:bg-slate-900/50 border border-slate-100 dark:border-slate-800 shadow-sm">
+<div class="w-24 h-24 rounded-xl bg-cover bg-center shrink-0" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCGTgL2xxyVr1ajiFnyMn9MgrPPDRCr0TsfKKtAbqvfreKhZjWW_alvoss2uDo91t5mQ7yCK-AO0yXX2P-WvKgbLA906qomJp02rydzVEL7wfDamP6ZNmDVa3FtjSWFfZMdKxBrdV20TDLyDWRTi_Q_jqFWV33LxrMjsCmTER-0eDkNWRM-hFHz6PrExmEaA-4XzUhe_dxgl6Ljrqzlzy9rOcxcm0RqFQwYOi7wMvaYVncEOSJSTI-0G9GjX9zK7mY-sD1cqiQikEo");'></div>
+<div class="flex flex-col justify-between py-1 flex-1">
+<div>
+<div class="flex justify-between items-start">
+<span class="bg-emerald-500/10 text-emerald-500 text-[10px] font-bold px-2 py-1 rounded-full uppercase tracking-wide">Encontrado</span>
+<span class="text-slate-400 text-xs">Hace 5 h</span>
+</div>
+<p class="text-slate-900 dark:text-slate-100 font-bold text-lg mt-1">Gato Tuxedo</p>
+<p class="text-slate-500 dark:text-slate-400 text-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">location_on</span> Belgrano, CABA
+                            </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="px-6 py-6 flex flex-col gap-2">
+<button class="flex items-center gap-3 w-full p-4 rounded-xl bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-slate-100 font-semibold transition-colors">
+<span class="material-symbols-outlined text-slate-400">settings</span>
+<span>Configuración</span>
+</button>
+<button class="flex items-center gap-3 w-full p-4 rounded-xl bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-slate-100 font-semibold transition-colors">
+<span class="material-symbols-outlined text-slate-400">help</span>
+<span>Ayuda y Soporte</span>
+</button>
+<button class="flex items-center gap-3 w-full p-4 rounded-xl bg-slate-50 dark:bg-slate-900 text-red-500 font-semibold transition-colors">
+<span class="material-symbols-outlined">logout</span>
+<span>Cerrar sesión</span>
+</button>
+</div>
+<div class="h-20"></div>
+<div class="fixed bottom-0 w-full max-w-[430px] border-t border-slate-100 dark:border-slate-800 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md px-4 pb-8 pt-2 z-20">
+<div class="flex gap-2">
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400" href="#">
+<div class="flex h-8 items-center justify-center">
+<span class="material-symbols-outlined">home</span>
+</div>
+<p class="text-[10px] font-bold uppercase tracking-wider">Inicio</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400" href="#">
+<div class="flex h-8 items-center justify-center">
+<span class="material-symbols-outlined">map</span>
+</div>
+<p class="text-[10px] font-bold uppercase tracking-wider">Mapa</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400" href="#">
+<div class="flex h-8 items-center justify-center">
+<span class="material-symbols-outlined">list_alt</span>
+</div>
+<p class="text-[10px] font-bold uppercase tracking-wider">Reportes</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-primary" href="#">
+<div class="flex h-8 items-center justify-center">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">person</span>
+</div>
+<p class="text-[10px] font-bold uppercase tracking-wider">Perfil</p>
+</a>
+</div>
+</div>
+</div>
+
+</body></html>

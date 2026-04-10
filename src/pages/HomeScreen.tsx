@@ -1,0 +1,175 @@
+import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import BottomNav from "../components/BottomNav";
+import { useMenu } from "../context/MenuContext";
+import { usePets } from "../hooks/usePets";
+import { fetchProfilesByIds, type Profile } from "../lib/profileService";
+import UserAvatar from "../components/UserAvatar";
+
+const categories = [
+  { icon: "near_me", label: "Cerca", bg: "bg-[#2b9dee]/10", color: "text-[#2b9dee]", path: "/map" },
+  { icon: "notifications_active", label: "Alertas", bg: "bg-amber-100 dark:bg-amber-900/30", color: "text-amber-600", path: "/notifications" },
+  { icon: "favorite", label: "Adopciones", bg: "bg-pink-100 dark:bg-pink-900/30", color: "text-pink-600", path: "/adoptions" },
+  { icon: "storefront", label: "Tienda", bg: "bg-emerald-100 dark:bg-emerald-900/30", color: "text-emerald-600", path: "/store" },
+  { icon: "directions_walk", label: "Servicios", bg: "bg-slate-100 dark:bg-slate-700", color: "text-slate-600 dark:text-slate-300", path: "/services" },
+];
+
+export default function HomeScreen() {
+  const navigate = useNavigate();
+  const { openMenu } = useMenu();
+  const { pets, isLoading } = usePets();
+  const [search, setSearch] = useState("");
+  const [reporterProfiles, setReporterProfiles] = useState<Record<string, Profile>>({});
+
+  useEffect(() => {
+    if (pets.length === 0) return;
+    const ids = [...new Set(pets.map((p) => p.reporter_id).filter(Boolean))] as string[];
+    fetchProfilesByIds(ids).then(setReporterProfiles);
+  }, [pets]);
+
+  const filteredPets = search.trim()
+    ? pets.filter((p) => {
+        const q = search.toLowerCase();
+        return (
+          p.breed?.toLowerCase().includes(q) ||
+          p.color?.toLowerCase().includes(q) ||
+          p.location?.toLowerCase().includes(q)
+        );
+      })
+    : pets;
+  const timeAgo = (iso: string) => {
+    const diff = Math.floor((Date.now() - new Date(iso).getTime()) / 60000);
+    if (diff < 1) return "ahora";
+    if (diff < 60) return `${diff}m`;
+    if (diff < 1440) return `${Math.floor(diff / 60)}h`;
+    return `${Math.floor(diff / 1440)}d`;
+  };
+
+  return (
+    <div className="relative flex h-auto min-h-screen w-full max-w-[430px] lg:max-w-none mx-auto flex-col bg-white dark:bg-slate-800 font-display text-slate-900 dark:text-white shadow-2xl lg:shadow-none dark:shadow-slate-900/50 overflow-x-hidden">
+      <div className="flex items-center bg-white dark:bg-slate-800 p-4 pb-2 justify-between sticky top-0 z-10 border-b border-slate-100 dark:border-slate-700">
+        <button onClick={openMenu} className="lg:hidden flex size-12 shrink-0 items-center justify-start">
+          <span className="material-symbols-outlined text-2xl">menu</span>
+        </button>
+        <h2 className="text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">Inicio</h2>
+        <div className="flex w-12 items-center justify-end">
+          <button
+            className="flex cursor-pointer items-center justify-center overflow-hidden rounded-xl h-12 bg-transparent text-[#2b9dee] p-0"
+            onClick={() => navigate("/profile")}
+          >
+            <span className="material-symbols-outlined text-3xl">account_circle</span>
+          </button>
+        </div>
+      </div>
+
+      <div className="px-4 py-3 bg-white dark:bg-slate-800">
+        <div className="flex w-full flex-1 items-stretch rounded-xl h-12">
+          <div className="text-slate-400 flex border-none bg-slate-100 dark:bg-slate-700 items-center justify-center pl-4 rounded-l-xl">
+            <span className="material-symbols-outlined">search</span>
+          </div>
+          <input
+            className="flex w-full min-w-0 flex-1 resize-none overflow-hidden bg-slate-100 dark:bg-slate-700 h-full text-slate-900 dark:text-white focus:outline-none border-none placeholder:text-slate-500 dark:placeholder:text-slate-400 px-2 text-base font-normal leading-normal"
+            placeholder="Buscar por raza, color o ubicación"
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+          />
+          {search && (
+            <button
+              onClick={() => setSearch("")}
+              className="flex items-center justify-center pr-3 bg-slate-100 dark:bg-slate-700 rounded-r-xl text-slate-400"
+            >
+              <span className="material-symbols-outlined text-[20px]">close</span>
+            </button>
+          )}
+        </div>
+      </div>
+
+      <div className="flex w-full overflow-x-auto px-4 py-3 bg-white dark:bg-slate-800 [&::-webkit-scrollbar]:hidden">
+        <div className="flex min-h-min flex-row items-start justify-start gap-6">
+          {categories.map((cat) => (
+            <button
+              key={cat.label}
+              onClick={() => cat.path ? navigate(cat.path) : undefined}
+              className="flex flex-1 flex-col items-center justify-center gap-2 w-16 text-center"
+            >
+              <div className={`w-14 h-14 ${cat.bg} flex items-center justify-center rounded-full ${cat.color}`}>
+                <span className="material-symbols-outlined">{cat.icon}</span>
+              </div>
+              <p className="text-slate-900 dark:text-white text-[13px] font-medium leading-normal">{cat.label}</p>
+            </button>
+          ))}
+        </div>
+      </div>
+
+      <div className="flex-1 bg-[#f6f7f8] dark:bg-slate-900 pb-24 lg:pb-8">
+        <div className="flex items-center justify-between px-4 pb-3 pt-5">
+          <h2 className="text-[22px] font-bold leading-tight tracking-[-0.015em]">Reportes Recientes</h2>
+          <button onClick={() => navigate("/all-reports")} className="text-[#2b9dee] text-sm font-semibold">Ver Todos</button>
+        </div>
+
+        <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 px-4 lg:px-6">
+          {isLoading && (
+            <div className="col-span-2 flex justify-center py-10">
+              <svg className="animate-spin h-8 w-8 text-[#2b9dee]" viewBox="0 0 24 24" fill="none">
+                <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"/>
+                <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8z"/>
+              </svg>
+            </div>
+          )}
+          {!isLoading && filteredPets.length === 0 && (
+            <div className="col-span-2 flex flex-col items-center py-12 text-slate-400 dark:text-slate-500 gap-3">
+              <span className="material-symbols-outlined text-[48px]">pets</span>
+              <p className="text-sm font-medium">No hay reportes aún</p>
+            </div>
+          )}
+          {filteredPets.slice(0, 10).map((pet) => (
+            <div
+              key={pet.id}
+              className="bg-white dark:bg-slate-800 rounded-xl overflow-hidden border border-slate-100 dark:border-slate-700 shadow-sm dark:shadow-slate-900/50 cursor-pointer"
+              onClick={() => navigate(`/pet/${pet.id}`)}
+            >
+              <div className="relative h-32 w-full bg-slate-200 dark:bg-slate-600">
+                {pet.image_url
+                  ? <img alt={pet.name ?? ""} className="w-full h-full object-cover" src={pet.image_url} />
+                  : <div className="w-full h-full flex items-center justify-center"><span className="material-symbols-outlined text-[40px] text-slate-300 dark:text-slate-500">pets</span></div>
+                }
+                <div className={`absolute top-2 left-2 ${pet.status === "lost" ? "bg-red-600" : "bg-emerald-600"} text-white px-2 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider`}>
+                  {pet.status === "lost" ? "Perdido" : "Encontrado"}
+                </div>
+                <div className="absolute bottom-0 inset-x-0 h-10 bg-gradient-to-t from-black/40 to-transparent" />
+                <span className="absolute bottom-1.5 right-2 text-[10px] text-white/80 font-medium">{timeAgo(pet.created_at)}</span>
+              </div>
+              <div className="p-2.5">
+                <h3 className="text-sm font-bold leading-tight truncate">
+                  {pet.status === "lost" ? (pet.name ?? "Sin nombre") : (pet.breed ?? "Sin raza")}
+                </h3>
+                <div className="flex items-center gap-1.5 text-slate-500 dark:text-slate-400 mt-0.5">
+                  <span className="material-symbols-outlined shrink-0" style={{ fontSize: 18, width: 18, height: 18, lineHeight: 1 }}>location_on</span>
+                  <span className="text-[11px] truncate">{pet.location}</span>
+                </div>
+                <div className="flex items-center gap-1.5 mt-1.5">
+                  <UserAvatar
+                    name={pet.reporter_name ?? "Anónimo"}
+                    avatarData={pet.reporter_id ? reporterProfiles[pet.reporter_id]?.avatar_data : null}
+                    avatarUrl={pet.reporter_id ? reporterProfiles[pet.reporter_id]?.avatar_url : null}
+                    size={18}
+                  />
+                  <span className="text-[11px] text-slate-500 dark:text-slate-400 truncate">{pet.reporter_name ?? "Anónimo"}</span>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <button
+        className="fixed bottom-24 lg:bottom-6 right-6 w-14 h-14 bg-[#2b9dee] text-white rounded-full shadow-lg flex items-center justify-center z-20"
+        onClick={() => navigate("/report")}
+      >
+        <span className="material-symbols-outlined text-3xl">add</span>
+      </button>
+
+      <BottomNav />
+    </div>
+  );
+}

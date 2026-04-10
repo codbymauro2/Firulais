@@ -1,0 +1,154 @@
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#2b9dee",
+            "background-light": "#f6f7f8",
+            "background-dark": "#101a22",
+          },
+          fontFamily: {
+            "display": ["Plus Jakarta Sans"]
+          },
+          borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+        },
+      },
+    }
+  </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100">
+<div class="relative flex min-h-screen w-full flex-col max-w-[430px] mx-auto bg-white dark:bg-background-dark shadow-xl overflow-x-hidden">
+<!-- TopAppBar -->
+<div class="sticky top-0 z-10 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md px-4 py-4 flex items-center justify-between border-b border-primary/10">
+<div class="flex items-center gap-3">
+<div class="text-primary cursor-pointer">
+<span class="material-symbols-outlined text-3xl">chevron_left</span>
+</div>
+<h2 class="text-xl font-bold tracking-tight">Reportar Mascota</h2>
+</div>
+<div class="text-slate-400">
+<span class="material-symbols-outlined">help_outline</span>
+</div>
+</div>
+<!-- Progress Steps -->
+<div class="flex w-full flex-row items-center justify-center gap-3 py-6">
+<div class="h-2 w-8 rounded-full bg-primary"></div>
+<div class="h-2 w-2 rounded-full bg-primary/20"></div>
+<div class="h-2 w-2 rounded-full bg-primary/20"></div>
+<div class="h-2 w-2 rounded-full bg-primary/20"></div>
+</div>
+<!-- Form Content -->
+<div class="px-4 pb-32 space-y-8">
+<!-- Step 1: Photos -->
+<section>
+<div class="flex items-center gap-2 mb-4">
+<div class="bg-primary/10 text-primary w-8 h-8 rounded-full flex items-center justify-center font-bold">1</div>
+<h3 class="text-lg font-bold">Fotos de la mascota</h3>
+</div>
+<div class="flex flex-col">
+<div class="flex flex-col items-center gap-4 rounded-xl border-2 border-dashed border-primary/30 bg-primary/5 px-6 py-10 transition-colors hover:bg-primary/10 cursor-pointer">
+<div class="bg-white dark:bg-slate-800 p-4 rounded-full shadow-sm text-primary">
+<span class="material-symbols-outlined text-4xl">add_a_photo</span>
+</div>
+<div class="flex flex-col items-center gap-1">
+<p class="text-slate-900 dark:text-slate-100 font-bold">Subir Imágenes</p>
+<p class="text-slate-500 dark:text-slate-400 text-sm text-center">Ayuda a otros a identificar a Firulais con fotos claras</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Step 2: Basic Info -->
+<section>
+<div class="flex items-center gap-2 mb-4">
+<div class="bg-primary/10 text-primary w-8 h-8 rounded-full flex items-center justify-center font-bold">2</div>
+<h3 class="text-lg font-bold">Datos básicos</h3>
+</div>
+<div class="grid grid-cols-1 gap-4">
+<div class="flex flex-col gap-1.5">
+<label class="text-sm font-semibold text-slate-700 dark:text-slate-300 ml-1">Nombre (o apodo)</label>
+<input class="w-full rounded-lg border-primary/20 bg-primary/5 focus:border-primary focus:ring-primary py-3 px-4" placeholder="Ej: Firulais" type="text"/>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="flex flex-col gap-1.5">
+<label class="text-sm font-semibold text-slate-700 dark:text-slate-300 ml-1">Especie</label>
+<select class="w-full rounded-lg border-primary/20 bg-primary/5 focus:border-primary focus:ring-primary py-3 px-4">
+<option>Perro</option>
+<option>Gato</option>
+<option>Otro</option>
+</select>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="text-sm font-semibold text-slate-700 dark:text-slate-300 ml-1">Raza</label>
+<input class="w-full rounded-lg border-primary/20 bg-primary/5 focus:border-primary focus:ring-primary py-3 px-4" placeholder="Ej: Labrador" type="text"/>
+</div>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="text-sm font-semibold text-slate-700 dark:text-slate-300 ml-1">Color predominante</label>
+<input class="w-full rounded-lg border-primary/20 bg-primary/5 focus:border-primary focus:ring-primary py-3 px-4" placeholder="Ej: Marrón con manchas blancas" type="text"/>
+</div>
+</div>
+</section>
+<!-- Step 3: Location -->
+<section>
+<div class="flex items-center gap-2 mb-4">
+<div class="bg-primary/10 text-primary w-8 h-8 rounded-full flex items-center justify-center font-bold">3</div>
+<h3 class="text-lg font-bold">Última ubicación</h3>
+</div>
+<div class="relative w-full h-48 rounded-xl overflow-hidden border border-primary/10">
+<img class="w-full h-full object-cover grayscale-[20%]" data-alt="Simplified city map of Buenos Aires" data-location="Buenos Aires" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6YieCRE4Kw8J8obUTqGLNUFdyIVg1a5_i9v7sU4qQXGDqaWMEW4qkMapHjGXgbJHBd_7NE5q1LPztDmCNtWEOn3D3J3ccZU05iAYfmWjLk9zgiqJ_Gmx1zueiw-lHwtnsCfH5Fpo9JFo7Z7bE4nLp8iGkxsucx4B-rjY_YHycXQEqL8druixhjSd9xNTI_WZEkuMpbWj4Gh3iitwpqi23BlRSDt_eBFR_FsZpO2HniNp-fF0dw-ae7qfmQs-DrvlA79RWnBX1Rg4"/>
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+<div class="text-primary drop-shadow-lg">
+<span class="material-symbols-outlined text-5xl" style="font-variation-settings: 'FILL' 1">location_on</span>
+</div>
+</div>
+<div class="absolute bottom-3 left-3 right-3 bg-white/90 dark:bg-slate-800/90 backdrop-blur-sm p-2 rounded-lg text-xs font-medium flex items-center gap-2 shadow-md">
+<span class="material-symbols-outlined text-primary text-sm">my_location</span>
+            Toca para ajustar la ubicación exacta
+          </div>
+</div>
+</section>
+<!-- Step 4: Contact -->
+<section>
+<div class="flex items-center gap-2 mb-4">
+<div class="bg-primary/10 text-primary w-8 h-8 rounded-full flex items-center justify-center font-bold">4</div>
+<h3 class="text-lg font-bold">Información de contacto</h3>
+</div>
+<div class="space-y-4">
+<div class="flex flex-col gap-1.5">
+<label class="text-sm font-semibold text-slate-700 dark:text-slate-300 ml-1">Teléfono / WhatsApp</label>
+<div class="relative">
+<span class="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 material-symbols-outlined">call</span>
+<input class="w-full rounded-lg border-primary/20 bg-primary/5 focus:border-primary focus:ring-primary py-3 pl-12 pr-4" placeholder="+54 9 11 ..." type="tel"/>
+</div>
+</div>
+<div class="flex items-start gap-3 p-4 rounded-xl bg-primary/5 border border-primary/10">
+<div class="text-primary">
+<span class="material-symbols-outlined">verified_user</span>
+</div>
+<p class="text-xs text-slate-600 dark:text-slate-400">Tu número solo se compartirá con personas que verifiquen haber encontrado a tu mascota.</p>
+</div>
+</div>
+</section>
+</div>
+<!-- Sticky Bottom Button -->
+<div class="fixed bottom-0 left-0 right-0 max-w-[430px] mx-auto p-4 bg-white/95 dark:bg-background-dark/95 backdrop-blur-md border-t border-primary/10">
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 rounded-xl shadow-lg shadow-primary/20 flex items-center justify-center gap-2 transition-all active:scale-[0.98]">
+        Publicar Reporte
+        <span class="material-symbols-outlined">send</span>
+</button>
+</div>
+</div>
+</body></html>

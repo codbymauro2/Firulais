@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#38bdf8",
+                        "soft-blue": "#e0f2fe",
+                        "background-light": "#f0f9ff",
+                        "background-dark": "#0c4a6e",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<title>Firulais Splash</title>
+<style type="text/tailwindcss">
+        body {
+            min-height: max(844px, 100dvh);
+        }
+        :root {
+            --ios-bg: #f0f9ff;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display antialiased overflow-hidden">
+<div class="relative flex h-screen w-full flex-col bg-background-light dark:bg-background-dark">
+<div class="flex items-center justify-between p-6 pb-2 w-full">
+<div class="text-sky-900 dark:text-sky-100 font-bold text-[15px]">9:41</div>
+<div class="flex gap-1.5 items-center">
+<span class="material-symbols-outlined text-[18px] text-sky-900 dark:text-sky-100">signal_cellular_4_bar</span>
+<span class="material-symbols-outlined text-[18px] text-sky-900 dark:text-sky-100">wifi</span>
+<span class="material-symbols-outlined text-[20px] text-sky-900 dark:text-sky-100">battery_full</span>
+</div>
+</div>
+<div class="flex flex-1 flex-col items-center justify-center px-8">
+<div class="w-full max-w-sm flex flex-col items-center">
+<div class="relative mb-10">
+<div class="absolute inset-0 scale-125 bg-sky-400/10 blur-3xl rounded-full"></div>
+<div class="relative flex h-52 w-52 items-center justify-center rounded-full bg-white dark:bg-sky-900/40 shadow-xl shadow-sky-200/50 dark:shadow-none border border-sky-100 dark:border-sky-800">
+<div class="flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-[110px] leading-none select-none">pets</span>
+<div class="absolute -bottom-1 -right-1 flex h-22 w-22 items-center justify-center rounded-full bg-sky-500 text-white shadow-lg border-4 border-white dark:border-sky-900 p-4">
+<span class="material-symbols-outlined text-4xl leading-none">search</span>
+</div>
+</div>
+</div>
+</div>
+<h1 class="text-sky-900 dark:text-sky-50 tracking-tight text-[48px] font-extrabold leading-tight text-center">
+                    Firulais
+                </h1>
+<p class="text-sky-600 dark:text-sky-300 text-xl font-medium leading-relaxed mt-4 text-center max-w-[280px]">
+                    Reconectando mascotas con sus familias
+                </p>
+</div>
+</div>
+<div class="w-full px-12 pb-24">
+<div class="flex flex-col gap-5 items-center">
+<div class="w-full max-w-[200px] h-1.5 rounded-full bg-sky-200/50 dark:bg-sky-800/50 overflow-hidden">
+<div class="h-full bg-sky-500 rounded-full w-2/3 shadow-[0_0_15px_rgba(56,189,248,0.5)]"></div>
+</div>
+<span class="text-sky-400 dark:text-sky-500 text-[11px] font-bold uppercase tracking-[0.2em]">
+                    Iniciando...
+                </span>
+</div>
+</div>
+<div class="absolute bottom-2 left-1/2 -translate-x-1/2 w-36 h-1.5 bg-sky-900/10 dark:bg-white/10 rounded-full"></div>
+</div>
+
+</body></html>

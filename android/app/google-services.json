@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "952232905949",
+    "project_id": "firulais-ff9e9",
+    "storage_bucket": "firulais-ff9e9.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:952232905949:android:c79cbb696e6082c48fdf34",
+        "android_client_info": {
+          "package_name": "com.firulais.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCztYC7tkLVoHNPManBA-BfMkZGMqd955w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
